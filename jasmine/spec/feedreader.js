@@ -55,24 +55,20 @@ $(function() {
 	});
 
 
-	/* TODO: Write a new test suite named "The menu" */
+	/* @description: new test suite named "The menu" */
 	describe('The menu', () => {
 
-	/* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
-         */
+	/* @description: the menu element is hidden by default. */
 		it('hidden by default', () => {
 			expect($('body').hasClass('menu-hidden')).toEqual(true);
 		});
 
-		/* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
+		/* @description: the menu changes visibility when the menu icon is clicked.
+		 * does the menu display when clicked and
+		 * does it hide when clicked again.
+    */
 		it('toggle menu', () => {
+			// listens for click in the menuIcon
 			$('.menu-icon-link').trigger('click');
 			expect($('body').hasClass('menu-hidden')).toBe(false);
 			$('.menu-icon-link').trigger('click');
@@ -80,7 +76,7 @@ $(function() {
 		});
 	});
 
-	/* TODO: Write a new test suite named "Initial Entries" */
+	/* @description: test suite named "Initial Entries" */
 	describe('Initial Entries', () => {
 
 		beforeEach(done => {
@@ -89,12 +85,9 @@ $(function() {
 			});
 		});
 
-		/* TODO: Write a test that ensures when the loadFeed
-					 * function is called and completes its work, there is at least
-					 * a single .entry element within the .feed container.
-					 * Remember, loadFeed() is asynchronous so this test will require
-					 * the use of Jasmine's beforeEach and asynchronous done() function.
-					 */
+		/* @description: when the loadFeed function is called and completes its work,
+		 * there is at least a single .entry element within the .feed container.
+		 */
 
 		it('at least a single entry in container', () => {
 			expect($('.entry').length).toBeGreaterThan(0);
