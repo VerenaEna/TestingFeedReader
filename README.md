@@ -12,8 +12,9 @@
 In this project Udacity provided me a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included Jasmine and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where me come in. I have to write the additional tests using Jasmine if the Javascript is working properly!
 
 ## How2Run
-Download the Repository from <a href="xxx">here</a>. Then open the index.html file in a browser
-or <a href="xxx"> click this link</a> to see the Tests live!
+Download the Repository or from <a href="https://github.com/VerenaEna/TestingFeedReader">here</a>. <br>
+Then open the index.html file in a browser
+<a href="xxx">Click this link</a> to see the Tests live!
 
 ## Tests
 Implemented Tests for
