@@ -4,7 +4,7 @@
 * [Project Overview](#projectoverview)
 * [How to run](#how2run)
 * [Tests](#tests)
-* [Udacity Instructions](#udacityInstructions)
+* [Udacity Instructions](#udacityinstructions)
 * [License](#license)
 
 ## ProjectOverview
@@ -15,18 +15,20 @@ In this project Udacity provided me a web-based application that reads RSS feeds
 Download the Repository from <a href="xxx">here</a>. Then open the index.html file in a browser
 or <a href="xxx"> click this link</a> to see the Tests live!
 
-## Tests That Were Implemented
-- * Test for `allfeeds` feeds has been defined and they are not empty
-- * Test `allfeeds` have a url and it is not empty
-- * Test `allfeeds` has a name and it is not empty
-- * Searches for the class of 'menu-hidden' in the body tag and checks the default menu is hidden
-- * Toggles the menu if the menu appears or disappears
-- * Tests if the loadFeed function has at least a single `.entry` within the `.feed` container
-- * Tests to see if two entries are different
+## Tests
+Implemented Tests for
+* `allfeeds` feeds has been defined and they are not empty
+* `allfeeds` have a url and it is not empty
+* `allfeeds` has a name and it is not empty
+
+* Searches for the class of `menu-hidden` in the body tag and checks the default menu is hidden
+* Toggles the menu when the menu appears or disappears
+* Tests if the asynchronous loadFeed function has at least a single `.entry` within the `.feed` container
+* Tests to see if two Feed entries are different
 
 ## UdacityInstructions
 Excercise location: <a href="https://github.com/udacity/frontend-nanodegree-feedreader">
-Udacity Feedreader Github repo </a>
+Udacity FeedReader Github repo </a>
 
 ## License
 MIT License
