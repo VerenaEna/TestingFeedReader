@@ -52,9 +52,9 @@ $(function() {
 	 * @description: new test suite named "The menu"
 	 */
 	describe('The menu', () => {
+		let hidden = $('body').hasClass('menu-hidden');
 		// the menu element is hidden by default.
 		it('is hidden by default', () => {
-			hidden = $('body').hasClass('menu-hidden');
 			expect(hidden).toBe(true);
 		});
 
@@ -62,17 +62,12 @@ $(function() {
 		 * it does the menu display when clicked and
 		 * does it hide when clicked again.
     */
-		it('is shown on click menuIcon once', () => {
-			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
-			// listens for click in the menuIcon
-			$('.menu-icon-link').trigger('click');
-			expect(hidden).toBe(false);
-		});
-
-		it('is toggeling by click menuIcon again', () => {
-			$('.menu-icon-link').trigger('click');
-			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
-			expect(true).toBe(true);
+		it('visibility change on click', () => {
+		  // listens for click in the menuIcon
+		  $('.menu-icon-link').trigger('click');
+		  expect($('body').hasClass('menu-hidden')).toBe(false);
+		  $('.menu-icon-link').trigger('click');
+		  expect($('body').hasClass('menu-hidden')).toBe(true);
 		});
 	});
 
