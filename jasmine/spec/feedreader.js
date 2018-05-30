@@ -1,4 +1,4 @@
-/* feedreader.js
+ /* feedreader.js
  *
  * This is the spec file that Jasmine will read and contains
  * all of the tests that will be run against your application.
@@ -17,24 +17,20 @@ $(function() {
 		// Checks the allFeeds variable has been defined and that it is not empty.
 		it('are defined', () => {
 			expect(allFeeds).toBeDefined();
-			console.log('feeds are defined');
 		});
 		it('and are not empty', () => {
 			expect(allFeeds.length).not.toBe(0);
-			console.log('feeds are not empty');
 		});
 
 		// Checks the allFeeds variable has urls and they are not empty.
 		it('urls are defined', () => {
 			for(let i = 0; i < allFeeds.length; i++){
 				expect(allFeeds[i].url).toBeDefined();
-				console.log('urls are defined');
 			}
 		});
 		it('and are not empty', () => {
 			for(let i = 0; i < allFeeds.length; i++){
-				expect(allFeeds[i].url).not.toBe(0);
-				console.log('urls are not empty');
+				expect(allFeeds[i].url.length).not.toBe(0);
 			}
 		});
 
@@ -42,13 +38,11 @@ $(function() {
 		it('names are defined', () => {
 			for(let i = 0; i < allFeeds.length; i++){
 				expect(allFeeds[i].name).toBeDefined();
-				console.log('feed names are defined');
 			}
 		});
 		it('and are not empty', () => {
 			for(let i = 0; i < allFeeds.length; i++){
-				expect(allFeeds[i].name).not.toBe(0);
-				console.log('feed names are not empty');
+				expect(allFeeds[i].name.length).not.toBe(0);
 			}
 		});
 	});
@@ -61,7 +55,6 @@ $(function() {
 		let visibility = $('body').hasClass('menu-hidden');
 		// the menu element is hidden by default.
 		it('is hidden by default', () => {
-			console.log('menu is hidden');
 			expect(visibility).toBe(true);
 		});
 
