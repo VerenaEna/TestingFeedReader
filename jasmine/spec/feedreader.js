@@ -62,14 +62,14 @@ $(function() {
 		 * it does the menu display when clicked and
 		 * does it hide when clicked again.
     */
-		it('is shown on click menuIcon', () => {
+		it('is shown on click menuIcon once', () => {
 			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
 			// listens for click in the menuIcon
 			$('.menu-icon-link').trigger('click');
 			expect(hidden).toBe(false);
 		});
 
-		it('and hides again by click menuIcon again', () => {
+		it('is toggeling by click menuIcon again', () => {
 			$('.menu-icon-link').trigger('click');
 			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
 			expect(true).toBe(true);
