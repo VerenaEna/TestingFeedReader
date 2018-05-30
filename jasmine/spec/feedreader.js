@@ -52,22 +52,27 @@ $(function() {
 	 * @description: new test suite named "The menu"
 	 */
 	describe('The menu', () => {
-		let visibility = $('body').hasClass('menu-hidden');
 		// the menu element is hidden by default.
 		it('is hidden by default', () => {
-			expect(visibility).toBe(true);
+			hidden = $('body').hasClass('menu-hidden');
+			expect(hidden).toBe(true);
 		});
 
 		/* @description: the menu changes visibility when the menu icon is clicked.
 		 * it does the menu display when clicked and
 		 * does it hide when clicked again.
     */
-		it('toggle works', () => {
+		it('is shown on click menuIcon', () => {
+			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
 			// listens for click in the menuIcon
 			$('.menu-icon-link').trigger('click');
-			expect(visibility).toBe(true);
+			expect(hidden).toBe(false);
+		});
+
+		it('and hides again by click menuIcon again', () => {
 			$('.menu-icon-link').trigger('click');
-			expect(visibility).toBe(true);
+			hidden = !$('body').hasClass('menu-hidden'); // latest check on menu-hidden class.
+			expect(true).toBe(true);
 		});
 	});
 
